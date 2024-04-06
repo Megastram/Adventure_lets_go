@@ -1,3 +1,5 @@
+import gameElements.createLaser
+import gameElements.lasers
 import korlibs.korge.input.MouseEvents
 import korlibs.korge.view.*
 
@@ -17,8 +19,11 @@ fun handleMouseInput(
     mouseEvents1.onClick { mouseEvents ->
         if (mouseEvents.button.isLeft) {
 
-            // erzeuge einen laser
-            container.createLaser(ufo)
+            // wenn es noch keine 10 laser gibt ...
+            if (lasers.size<10) {
+                // erzeuge einen laser
+                container.createLaser(ufo)
+            }
 
         }
     }

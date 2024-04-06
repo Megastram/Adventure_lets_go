@@ -1,3 +1,5 @@
+import gameElements.createAsteroid
+import gameElements.createUfo
 import korlibs.image.color.*
 import korlibs.korge.*
 import korlibs.korge.input.*
