@@ -32,7 +32,7 @@ fun Container.createAsteroid(ufo: Image) {
             }
 
             // Finde kollidierenden Laser und speichere ihn als name "collidedLaser"
-            val collidedLaser = hitTestView( lasers )
+            val collidedLaser = lasers.firstOrNull { hitTestView(it) != null }
             // Wenn das ergebnis null ist, dann hat kein Laser kollidiert.
             // Aber wenn es NICHT null ist, dann ...
             if ( collidedLaser!=null ) {
