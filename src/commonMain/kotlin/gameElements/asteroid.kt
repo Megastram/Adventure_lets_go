@@ -4,6 +4,7 @@ import globalGameWindow
 import helper.assignDefaultHitShape
 import korlibs.image.color.Colors
 import korlibs.korge.view.*
+import kotlin.random.Random
 
 fun Container.createAsteroid(ufo: Image) {
 
@@ -12,7 +13,7 @@ fun Container.createAsteroid(ufo: Image) {
     circle(
         fill = Colors.RED
     ) {
-        position(x = ufo.x, y = 0)
+        position(x = Random.nextDouble( container.width ), y = 0)
         anchor(0.5, 0.5)
         assignDefaultHitShape()
         addUpdater {
