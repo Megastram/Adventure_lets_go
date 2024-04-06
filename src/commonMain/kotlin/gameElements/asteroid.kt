@@ -11,7 +11,8 @@ fun Container.createAsteroid(ufo: Image) {
     val container: Container = this
 
     circle(
-        fill = Colors.RED
+        fill = Colors.RED,
+        radius = Random.nextDouble(10.0,20.0)
     ) {
         position(x = Random.nextDouble( container.width ), y = 0)
         anchor(0.5, 0.5)
