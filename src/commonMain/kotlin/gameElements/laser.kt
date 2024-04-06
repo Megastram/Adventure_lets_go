@@ -19,7 +19,7 @@ val laserSpeed = 5
 /**
  * Erzeuge einen Laser
  **/
-fun Stage.createLaser(ufo: Image) {
+fun Container.createLaser(ufo: Image) {
 
     val laser = solidRect(3.0, 20.0, Colors.RED) {
         anchor(0.5, 0.5)

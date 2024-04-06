@@ -1,10 +1,13 @@
 package gameElements
 
+import globalGameWindow
 import helper.assignDefaultHitShape
 import korlibs.image.color.Colors
 import korlibs.korge.view.*
 
-fun Stage.createAsteroid(ufo: Image, container: Stage) {
+fun Container.createAsteroid(ufo: Image) {
+
+    val container: Container = this
 
     circle(
         fill = Colors.RED
@@ -24,7 +27,7 @@ fun Stage.createAsteroid(ufo: Image, container: Stage) {
 
             // Prüfe, ob wir mit dem UFO kollidiert sind
             if ( hitTestView(ufo) != null ) {
-                gameWindow.close(0)
+                globalGameWindow.close(0)
             }
 
             // Finde kollidierenden Laser und speichere ihn als name "collidedLaser"
