@@ -1,0 +1,20 @@
+= ADVENTURE LETS GO!
+
+A small spaceship needs YOUR help before it is attacked by the evil Luchas!!!
+
+
+
+=== Controls
+
+Mouse: Movement
+
+Left click : Shoot a laser
+
+
+=== Credits
+
+Made using KorGE
+
+You can find the KorGE documentation here: <https://docs.korge.org/korge/>
+
+Created starting from this simple template: <https://github.com/korlibs/korge-hello-world>
