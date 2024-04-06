@@ -6,13 +6,15 @@ import korlibs.image.color.Colors
 import korlibs.korge.view.*
 import kotlin.random.Random
 
+var numasteroits : Int = 0
+
 fun Container.createAsteroid(ufo: Image) {
 
     val container: Container = this
 
     circle(
         fill = Colors.RED,
-        radius = Random.nextDouble(10.0,20.0)
+        radius = Random.nextDouble(10.0,30.0)
     ) {
         position(x = Random.nextDouble( container.width ), y = 0)
         anchor(0.5, 0.5)
@@ -43,6 +45,8 @@ fun Container.createAsteroid(ufo: Image) {
 
                 // lösche den laser
                 removeLaser( collidedLaser )
+
+                numasteroits += 1
 
             }
 
